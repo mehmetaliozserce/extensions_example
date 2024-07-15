@@ -1,13 +1,14 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-
 extension PaddingExtension on Widget {
- //widget'ın her köşesinden padding ekler
+  // TR: Widget'ın her köşesinden padding ekler.
+  // EN: Adds uniform padding around the widget.
   Widget padAll(double value) => 
     Padding(padding: EdgeInsets.all(value), child: this);
 
-  // Widget'a yatay-dikey padding ekler.
+  // TR: Widget'a yatay-dikey padding ekler.
+  // EN: Adds symmetric vertical and horizontal padding to the widget.
   Widget padSymmetric({double vertical = 0.0, double horizontal = 0.0}) => 
     Padding(
       padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
@@ -16,16 +17,19 @@ extension PaddingExtension on Widget {
 }
 
 extension VisibilityExtension on Widget {
-  // Widget'ı isVisible değerine göre gösterir.
+  // TR: Widget'ı isVisible değerine göre gösterir.
+  // EN: Conditionally display the widget based on the isVisible flag.
   Widget visible(bool isVisible) => isVisible ? this : const SizedBox.shrink();
 }
 
 extension MarginExtension on Widget {
-  // Widget'a margin ekler.
+  // TR: Widget'a margin ekler.
+  // EN: Adds uniform margin around the widget.
   Widget marginAll(double value) => 
     Container(margin: EdgeInsets.all(value), child: this);
 
-  // Widget'a  yatay-dikey olarak margin ekler.
+  // TR: Widget'a yatay-dikey olarak margin ekler.
+  // EN: Adds symmetric vertical and horizontal margins to the widget.
   Widget marginSymmetric({double vertical = 0.0, double horizontal = 0.0}) => 
     Container(
       margin: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
@@ -34,19 +38,22 @@ extension MarginExtension on Widget {
 }
 
 extension RotationExtension on Widget {
-  // Widget'ı belirtilen derece kadar döndürür.
+  // TR: Widget'ı belirtilen derece kadar döndürür.
+  // EN: Rotates the widget by a specified number of degrees.
   Widget rotate(double degrees) => 
     Transform.rotate(angle: degrees * pi / 180, child: this);
 }
 
 extension ScaleExtension on Widget {
-  // Widget'ı belirtilen faktör kadar ölçeklendirir.
+  // TR: Widget'ı belirtilen faktör kadar ölçeklendirir.
+  // EN: Scales the widget by a specified factor.
   Widget scale(double scale) => 
     Transform.scale(scale: scale, child: this);
 }
 
 extension BorderExtension on Widget {
-  // Widget'a özelleştirilebilir renk ve genişlikte bir kenarlık ekler.
+  // TR: Widget'a özelleştirilebilir renk ve genişlikte bir kenarlık ekler.
+  // EN: Adds a border to the widget with customizable color and width.
   Widget withBorder({Color color = Colors.black, double width = 1.0}) => 
     Container(
       decoration: BoxDecoration(
@@ -57,7 +64,8 @@ extension BorderExtension on Widget {
 }
 
 extension ShadowExtension on Widget {
-  // Widget'a gölge ekler.
+  // TR: Widget'a gölge ekler.
+  // EN: Applies a shadow to the widget.
   Widget withShadow({Color color = Colors.black, double blurRadius = 10.0, Offset offset = const Offset(2, 2)}) => 
     Container(
       decoration: BoxDecoration(
@@ -74,7 +82,8 @@ extension ShadowExtension on Widget {
 }
 
 extension BackgroundColorExtension on Widget {
-  // Widget'ın arka plan rengini değiştirir.
+  // TR: Widget'ın arka plan rengini değiştirir.
+  // EN: Changes the background color of the widget.
   Widget withBackgroundColor(Color color) => 
     Container(
       color: color,

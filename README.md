@@ -1,6 +1,4 @@
-Tabii, işte İngilizce README dosyasının içeriği `README.md` olarak oluşturmak için:
 
-```markdown
 # Flutter Extensions Demo 🚀
 
 ## English
